@@ -1,0 +1,142 @@
+@import "./variables";
+@import "./mixins";
+@import "./common";
+
+.signup {
+  h2 {
+    margin: 0 0 8px 0;
+    font-size: $medium-font-size + 8;
+    font-family: $heading-font;
+    line-height: 1.2em;
+    @include sm-min {
+      font-size: $large-font-size + 2;
+    }
+  }
+  h4 {
+    font-family: $heading-font;
+    font-size: $bace-font-size - 2;
+    @include sm-min {
+      font-size: $medium-font-size;
+    }
+  }
+  .form-group {
+    margin: 0 0 35px 0;
+    position: relative;
+    label {
+      display: block;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+      font-size: $bace-font-size - 4;
+      color: rgba($gray, 0.5);
+      font-family: $secondary-font;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      display: block;
+      max-width: 500px;
+      border: 0;
+      border-bottom: 1px solid $gray-light;
+      padding: 10px 0;
+      outline: 0;
+      font-family: $secondary-font;
+      font-size: $bace-font-size - 4;
+      &:valid + label,
+      &:focus + label {
+        font-size: $bace-font-size - 2;
+        color: $black;
+        top: -6px;
+      }
+      &:invalid {
+      }
+    }
+  }
+  .newsletterPreferences {
+    max-width: 550px;
+    @include md {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    .newsletterPreferencesItm {
+      padding: 15px 10px;
+      margin: 5px 0;
+      border: 1px solid $black;
+      text-align: center;
+      cursor: pointer;
+      color: $black;
+      @include md {
+        width: -webkit-calc(50% - 10px);
+        width: calc(50% - 10px);
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      @include lg {
+        width: -webkit-calc(25% - 10px);
+        width: calc(25% - 10px);
+      }
+      h6 {
+        font-family: $heading-font-bold;
+        font-size: $bace-font-size - 2;
+        margin: 0 0 8px 0;
+        line-height: 1.2em;
+      }
+      p {
+        margin: 0;
+        font-size: $bace-font-size - 4;
+        line-height: 1.3em;
+      }
+      &:hover {
+        background-color: $gray;
+        color: $white;
+      }
+      &.active {
+        background-color: $red;
+        color: $white;
+      }
+    }
+  }
+  .customCheck {
+    margin: 15px 0px;
+    font-size: $bace-font-size - 4;
+    font-family: $secondary-font-bold;
+    cursor: pointer;
+    a {
+      font-family: $secondary-font;
+      border-bottom: 1px solid $black;
+      font-size: $bace-font-size - 3;
+    }
+  }
+  input[type="submit"] {
+    padding: 15px 20px;
+    border: 1px solid $black;
+    display: inline-block;
+    cursor: pointer;
+    font-size: $bace-font-size - 4;
+    font-family: $secondary-font-bold;
+    margin: 0 0 5px 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: transparent;
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+  p {
+    font-size: $bace-font-size - 3;
+    font-weight: 400;
+  }
+}

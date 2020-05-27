@@ -1,0 +1,57 @@
+/* Domaine Disp */
+
+@font-face {
+    font-family: 'DomaineDispSemibold';
+    src: url('DomaineDispSemibold.eot');
+    src: local('Domaine Disp Semibold'), local('DomaineDispSemibold'),
+        url('DomaineDispSemibold.eot?#iefix') format('embedded-opentype'),
+        url('DomaineDispSemibold.woff2') format('woff2'),
+        url('DomaineDispSemibold.woff') format('woff'),
+        url('DomaineDispSemibold.ttf') format('truetype'),
+        url('DomaineDispSemibold.svg#DomaineDispSemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DomaineDispRegular';
+    src: url('DomaineDisp-Regular.eot');
+    src: local('Domaine Disp Regular'), local('DomaineDisp-Regular'),
+        url('DomaineDisp-Regular.eot?#iefix') format('embedded-opentype'),
+        url('DomaineDisp-Regular.woff2') format('woff2'),
+        url('DomaineDisp-Regular.woff') format('woff'),
+        url('DomaineDisp-Regular.ttf') format('truetype'),
+        url('DomaineDisp-Regular.svg#DomaineDisp-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* GT Walsheim Pro */
+@font-face {
+    font-family: 'GT Walsheim Pro Bold';
+    src: url('GTWalsheimPro-Bold.eot');
+    src: local('GT Walsheim Pro Bold'), local('GTWalsheimPro-Bold'),
+        url('GTWalsheimPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GTWalsheimPro-Bold.woff2') format('woff2'),
+        url('GTWalsheimPro-Bold.woff') format('woff'),
+        url('GTWalsheimPro-Bold.ttf') format('truetype'),
+        url('GTWalsheimPro-Bold.svg#GTWalsheimPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-Light.eot');
+    src: local('GT Walsheim Pro Light'), local('GTWalsheimPro-Light'),
+        url('GTWalsheimPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('GTWalsheimPro-Light.woff2') format('woff2'),
+        url('GTWalsheimPro-Light.woff') format('woff'),
+        url('GTWalsheimPro-Light.ttf') format('truetype'),
+        url('GTWalsheimPro-Light.svg#GTWalsheimPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

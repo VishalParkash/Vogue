@@ -1,0 +1,23 @@
+/* for post */
+.singlePost .singlePostTop .singlePostTopLeft img{
+    height:auto;
+}
+.postTagLine p{
+    display:inline-block;
+    margin:0;
+    padding:0;
+}
+.postBy{text-transform:uppercase;}
+.wp-block-embed-youtube{margin:0;}
+.sticky-post{
+    position: -webkit-sticky;
+}
+.CloseButton{
+    z-index:99;
+}
+/* for footer */
+@media only screen and (min-width: 1200px)  {
+    .menu-wrapper{
+        height:48px;
+    }
+}

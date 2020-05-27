@@ -1,0 +1,150 @@
+@import "./variables";
+@import "./mixins";
+@import "./common";
+
+.tabLink {
+  margin-bottom: 50px;
+  @include sm-max {
+    display: none;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border-top: 1px solid rgba($gray-light, 0.4);
+    border-bottom: 1px solid $gray-light;
+    li {
+      padding: 0 12px;
+      margin: 0;
+      list-style: none;
+      display: inline-block;
+      vertical-align: top;
+      a {
+        display: block;
+        border: 0;
+        text-decoration: none;
+        outline: 0;
+        position: relative;
+        font-size: $small-font-size;
+        font-family: $secondary-font-bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 10px 0;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background-color: transparent;
+        }
+      }
+      &.active {
+        a {
+          &:after {
+            background-color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+// tabLinkMobile
+.tabLinkMobile {
+  position: relative;
+  border-top: 1px solid rgba($gray-light, 0.4);
+  border-bottom: 1px solid $gray-light;
+  margin-bottom: 20px;
+  @include sm-min {
+    display: none;
+  }
+  label {
+    display: block;
+    margin: 0;
+    padding: 0 15px;
+    cursor: pointer;
+    position: relative;
+    /*
+    background-image: url(../images/down-arrow.svg);
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    */
+    span {
+      display: inline-block;
+      border: 0;
+      text-decoration: none;
+      outline: 0;
+      position: relative;
+      font-size: $small-font-size;
+      font-family: $secondary-font-bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 10px 0;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: $red;
+      }
+    }
+    .tabLinkMobileArrow {
+      width: 13px;
+      height: auto;
+      position: absolute;
+      right: 15px;
+      top: 18px;
+    }
+  }
+
+  .tabLinkMobileOver {
+    padding: 10px 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: $white;
+    display: none;
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        vertical-align: top;
+        a {
+          display: block;
+          border: 0;
+          text-decoration: none;
+          outline: 0;
+          position: relative;
+          font-size: $small-font-size;
+          font-family: $secondary-font-bold;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          padding: 10px 0;
+        }
+        &.active {
+          a {
+            color: $gray-light;
+          }
+        }
+      }
+    }
+  }
+  &.active {
+    label {
+      .tabLinkMobileArrow {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

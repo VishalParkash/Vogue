@@ -1,0 +1,35 @@
+@import "./variables";
+@import "./mixins";
+.sec404 {
+  padding: 100px 0;
+  min-height: 60vh;
+  font-family: $heading-font;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  .sec404Inner {
+    text-align: center;
+    h2 {
+      font-size: $large-font-size - 16;
+      line-height: 1.2em;
+      color: $gray;
+      @include md {
+        font-size: $large-font-size;
+      }
+    }
+    p {
+      //   font-size: $bace-font-size + 10;
+      color: $gray;
+    }
+    .btn-red {
+      padding: 17px 20px 15px;
+      line-height: 1em;
+    }
+  }
+}

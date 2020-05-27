@@ -1,0 +1,192 @@
+@import "./variables";
+@import "./mixins";
+@import "./common";
+.pagination {
+  padding: 5px 0;
+  ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    li {
+      padding: 0;
+      margin: 4px 0;
+      list-style: none;
+      display: inline-block;
+      vertical-align: top;
+      a {
+        display: block;
+        text-decoration: none;
+        color: $gray-dark;
+        border: 2px solid $gray-dark;
+        border-radius: 50%;
+        min-width: 36px;
+        height: 36px;
+        line-height: 32px;
+        text-align: center;
+        font-family: $primary-font;
+        font-weight: 600;
+        font-size: $bace-font-size - 4;
+        &:hover {
+          background-color: $gray-dark;
+          color: $white;
+          border-color: $white;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+      &.button {
+        a {
+          border-color: transparent;
+          width: auto;
+        }
+      }
+      &.active {
+        a {
+          background-color: $gray-dark;
+          color: $white;
+          border-color: $white;
+        }
+      }
+    }
+  }
+}
+
+// pagination 2
+.pagination2 {
+  padding: 15px 0;
+  ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    li {
+      padding: 0;
+      margin: 5px;
+      display: inline-block;
+      vertical-align: middle;
+      a {
+        display: block;
+        border: 0;
+        width: 42px;
+        height: 42px;
+        background-color: $red;
+        border-radius: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        img {
+          display: block;
+          width: 15px;
+          height: auto;
+        }
+      }
+      span {
+        color: $gray-light;
+      }
+      &.disabled {
+        a {
+          background-color: rgba($gray-light, 0.4);
+          pointer-events: none;
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+.paginate-links {
+  padding: 30px 15px;
+  text-align: center;
+  a,
+  span {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: $gray-dark;
+    border: 2px solid $gray-dark;
+    border-radius: 50%;
+    min-width: 36px;
+    height: 36px;
+    line-height: 32px;
+    text-align: center;
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: $bace-font-size - 4;
+    margin: 4px;
+    &:hover {
+      background-color: $gray-dark;
+      color: $white;
+      border-color: $white;
+    }
+    &.next,
+    &.prev {
+      border-color: transparent;
+    }
+  }
+  span {
+    background-color: $gray-dark;
+    color: $white;
+    border-color: $white;
+  }
+}
+
+.paginationSingle {
+  padding: 30px 0;
+  .paginationSingleInner {
+    text-align: center;
+    // color: transparent;
+    a {
+      display: inline-block;
+      vertical-align: top;
+      border: 0;
+      width: 42px;
+      height: 42px;
+      background-color: $red;
+      color: transparent;
+      border-radius: 50%;
+      margin: 5px;
+      position: relative;
+      overflow: hidden;
+      &:after {
+        content: "";
+        color: $white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+      }
+      &:hover {
+        background-color: $gray;
+      }
+    }
+    a[rel="prev"] {
+      &:after {
+        // content: "prev";
+        background-image: url(../images/back.png);
+      }
+    }
+    a[rel="next"] {
+      &:after {
+        background-image: url(../images/next.png);
+      }
+    }
+    .postCounter {
+      display: inline-block;
+      vertical-align: top;
+      height: 42px;
+      line-height: 42px;
+      margin: 5px;
+    }
+  }
+}

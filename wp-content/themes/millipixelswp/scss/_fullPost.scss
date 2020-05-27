@@ -1,0 +1,119 @@
+@import "../scss/mixins";
+
+// Full Post
+
+.secHeading {
+  margin: 0 0 24px;
+  font-size: 32px;
+  line-height: 1.3em;
+  font-family: "DomaineDispRegular";
+  text-transform: none;
+  span {
+    display: inline-block;
+    &:before {
+      content: "";
+      display: block;
+      border-top: 10px solid #000;
+    }
+  }
+  @include lg {
+    margin: 0 0 64px 0;
+    font-size: 64px;
+  }
+}
+
+// section {
+//   border-top: 1px solid rgb(0, 0, 0);
+// }
+
+.full-post {
+  margin-bottom: 54px;
+  @include lg {
+    margin-bottom: 64px;
+  }
+  .post-img {
+    background: #ee0000;
+    img {
+      display: block;
+      width: 100%;
+      max-height: 770px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+    }
+    &:hover {
+      img {
+        mix-blend-mode: multiply;
+      }
+
+      .img-caption {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .img-text {
+    background: #fff;
+  }
+
+  .img-caption {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(45, 46, 47);
+    display: block;
+    font-family: $GTWalsheimPro;
+    padding: 24px 8.333% 0px 8.333%;
+    width: calc(83.333%);
+    margin-left: 16.667%;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    position: relative;
+
+    @include lg {
+      padding-left: 40px;
+      padding-right: 21%;
+    }
+
+    @include sm {
+      font-size: 12px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      background: rgb(45, 46, 47) none repeat scroll 0% 0%;
+    }
+
+    h6 {
+      font-size: 12px;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-family: $DomaineDispRegular;
+      transition: all 0.1s ease-in 0s;
+      margin: 0px;
+      color: #000;
+      font-style: italic;
+      line-height: normal;
+      text-transform: none;
+
+      @include xl {
+        font-size: 48px;
+      }
+    }
+
+    .caption-detail {
+      color: #000;
+      .time {
+        color: rgb(76, 77, 78);
+      }
+    }
+  }
+}
